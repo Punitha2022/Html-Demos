@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gradient-background{
+            /* rgba - red , green, blue, alpha (0 to 1)
+            alpha - level of opacity or transparency;
+            0- fully transparent
+            1- fully opaque
+            */
+            background: linear-gradient(to right,
+            hsla(70, 100%, 80%, 0.932),/* hue,saturation, lightness,alpha */
+              rgba(255, 0, 0, 0.135));
+        }
+        .item-color{
+            background: linear-gradient(to right,
+            hsla(175, 100%, 80%, 0.932),/* hue,saturation, lightness,alpha */
+              rgba(0, 255, 47, 0.135));
+        }
+        .fullwidth{
+            flex:1;
+            padding:20px;
+            margin: 0px;
+            border: 1px solid #333;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            padding:20px;
+            margin: 0px;
+            flex:1; /*Distribute space equally to the items */
+            border: 1px solid #333;
+           
+        }
+        @media (max-width:480px){
+            .item{
+                flex-basis: 100%; /*for small screen, take an entire width. no wrap*/
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="fullwidth gradient-background">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur velit maxime delectus iste sunt reprehenderit modi nobis, rem ratione, dolor ullam, temporibus provident odio facilis quasi illo sequi error?
+    </div>
+    <div class="container">
+     <div class="item item-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eum saepe unde! Delectus, magnam enim, corporis explicabo molestias natus ratione doloribus voluptatem, perspiciatis sit veritatis suscipit nobis ea architecto quibusdam.</div>
+     <div class="item item-color">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam voluptates, asperiores quisquam quod quas accusamus quis enim voluptatem dignissimos reiciendis ducimus! Sit quas mollitia repudiandae quidem quibusdam doloremque dicta ratione?</div>
+     <div class="item item-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni suscipit incidunt libero ipsum esse necessitatibus voluptate nam reprehenderit inventore, soluta fuga, hic doloremque, quod repellat. Consectetur earum voluptate autem quis.</div>
+    </div>
+</body>
+</html>

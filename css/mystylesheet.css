@@ -1,0 +1,13 @@
+.myliststyle{
+    list-style-type: circle;
+    padding: 10px;
+}
+.myliststyle li{
+    margin:10px 20px;
+    color:aqua;
+}
+body{
+    margin:20px;
+    background-color:#d6cbcb;
+    background-image: url(../images/img2.jpg);
+}
